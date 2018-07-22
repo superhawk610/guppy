@@ -228,23 +228,19 @@ export const deleteDependenciesStart = (
 
 export const deleteDependenciesError = (
   projectId: string,
-  notificationId: string,
   dependencies: Array<{ dependencyName: string }>
 ) => ({
   type: DELETE_DEPENDENCIES_ERROR,
   projectId,
-  notificationId,
   dependencies,
 });
 
 export const deleteDependenciesFinish = (
   projectId: string,
-  notificationId: string,
   dependencies: Array<{ dependencyName: string }>
 ) => ({
-  type: DELETE_DEPENDENCY_FINISH,
+  type: DELETE_DEPENDENCIES_FINISH,
   projectId,
-  notificationId,
   dependencies,
 });
 
@@ -321,23 +317,19 @@ export const addDependenciesStart = (
 
 export const addDependenciesError = (
   projectId: string,
-  notificationId: string,
   dependencies: Array<string>
 ) => ({
   type: ADD_DEPENDENCIES_ERROR,
   projectId,
-  notificationId,
   dependencies,
 });
 
 export const addDependenciesFinish = (
   projectId: string,
-  notificationId: string,
   dependencies: Array<Dependency>
 ) => ({
   type: ADD_DEPENDENCIES_FINISH,
   projectId,
-  notificationId,
   dependencies,
 });
 
