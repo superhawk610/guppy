@@ -22,7 +22,7 @@ export default () =>
       // Similar command to lsof
       // Finds if the specified port is in use
       const command = /^win/.test(os.platform())
-        ? `netstat -aon | find "${port}"`
+        ? `netstat -aon | C:\\WINDOWS\\system32\\find "${port}"`
         : `lsof -i :${port}`;
       childProcess.exec(command, (err, res) => {
         // Ugh, childProcess assumes that no output means that there was an
